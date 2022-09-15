@@ -1,0 +1,224 @@
+/*========== GOOGLE FONTS ==========*/
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+/*========== VARIABLES CSS ==========*/
+:root {
+  /*===== Colors =====*/
+  --soft-white: #fbfaf5;
+  --soft-black: #181a18;
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+  --primary-blue: #26a3de;
+  --shy-blue: #c0e4f5;
+  --confident-blue: #68bfe8;
+  --soothing-blue: #ecf7fc;
+  --signal-red: #ff2600;
+  --error: #ff3333;
+
+  /*===== Font and typography =====*/
+  --body-font: "Outfit", sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --fs-6: 6rem;
+  --fs-5-5: 5.5rem;
+  --fs-5: 5rem;
+  --fs-4-5: 4.5rem;
+  --fs-4: 4rem;
+  --fs-3-5: 3.5rem;
+  --fs-3: 3rem;
+  --fs-2-5: 2.5rem;
+  --fs-2: 2rem;
+  --fs-1-5: 1.5rem;
+  --fs-1: 1rem;
+  --fs-0-95: 0.95rem;
+  --fs-0-85: 0.85rem;
+  --fs-0-75: 0.75rem;
+  --fs-0-65: 0.65rem;
+  --fs-0-5: 0.5rem;
+  --fs-0-25: 0.275rem;
+  --fs-0-2: 0.2rem;
+  /*===== Font weight =====*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /*===== Margenes Bottom =====*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+  --mb-3-5: 3rem;
+  --mb-4: 4rem;
+  --mb-4-5: 4.5rem;
+  --mb-5: 5rem;
+  --mb-5-5: 5.5rem;
+  --mb-6: 6rem;
+  --mb-6-5: 6.5rem;
+  --mb-7: 7rem;
+  --mb-7-5: 7.5rem;
+  --mb-8: 8rem;
+}
+
+/*==================== BASE ====================*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: 0.9375rem;
+  color: var(--light-gray);
+  background-color: var(--white);
+}
+
+p {
+  font-family: var(--body-font);
+  font-size: 0.9375rem;
+  color: var(--grayish-blue);
+  font-weight: 400;
+}
+
+table {
+  border-spacing: 0;
+}
+
+td {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--dark-blue);
+  font-weight: 700;
+  font-family: var(--body-font);
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+@media only screen and (max-width: 1440px) {
+  /*==================== QR CARD SECTION ====================*/
+  .qr {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-gray);
+  }
+
+  .qr-card {
+    flex: 0 0 23.8%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: var(--mb-1-5);
+    padding: var(--mb-1);
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .qr-card:hover {
+    background-color: var(--soft-black);
+    scale: 1.02;
+  }
+
+  .qr-card:hover .qr {
+    background-color: rgba(191, 192, 194, 0.3);
+  }
+
+  .qr-card:hover .qr-content h3 {
+    color: var(--soothing-blue);
+  }
+
+  .qr-card:hover .qr-content p {
+    color: var(--shy-blue);
+  }
+
+  .qr-card img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .qr-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: var(--mb-0-75);
+  }
+
+  .qr-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .qr-content p {
+    width: 85%;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+/* smartphones, iPhones */
+@media only screen and (max-width: 480px) {
+  .qr {
+    padding: var(--mb-2);
+  }
+
+  .qr-card {
+    flex: 0 0 100%;
+  }
+}
