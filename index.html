@@ -7,14 +7,24 @@
 
     <title>QR Code Component | Frontend Mentor</title>
 
+<!-- ICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- FAVICON -->
     <link
       rel="shortcut icon"
       href="images/favicon-32x32.png"
       type="image/x-icon"
     />
   </head>
+
+  <!-- BODY -->
   <body>
+
+    <!-- QR SECTION -->
     <section class="qr">
       <div class="qr-card">
         <img src="images/image-qr-code.png" alt="" onclick="NewTab()" />
@@ -24,7 +34,20 @@
       Scan the QR code to visit Frontend Mentor and Take your coding skills
       to the next level
 </div>
+
         </p>
+      </div>
+
+      <!-- QR DIALOG MODAL -->
+      <div class="qr-dialog">
+        <div class="qr-dialog__card">
+          <i class='bx bx-chevron-left bx-tada' ></i>
+
+          <span>
+            Scan QR Code with your mobile camera or click on QR Code to be redirected to <strong style="color: hsl(218, 44%, 22%);">frontend mentor's</strong> page.
+            <i class='bx bx-x' onclick="closeDialog()"></i>
+          </span>
+        </div>
       </div>
     </section>
   </body>
@@ -34,4 +57,21 @@
       window.open("https://www.frontendmentor.io/", "_blank");
     }
   </script>
+
+  <script>
+    setTimeout(() => {
+      document.querySelector('.qr-dialog').classList.add("show-qr-dialog"); 
+    }, 3000);
+
+    function closeDialog() {
+      document.querySelector('.qr-dialog').classList.remove("show-qr-dialog");  
+    }
+  </script>
 </html>
+
+
+IF (WIDTH < NUMBER) {
+
+} ELSE {
+  
+}

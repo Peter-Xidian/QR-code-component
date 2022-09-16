@@ -135,82 +135,158 @@ a {
   color: var(--black);
 }
 
-@media only screen and (max-width: 1440px) {
-  /*==================== QR CARD SECTION ====================*/
-  .qr {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--light-gray);
-  }
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
 
-  .qr-card {
-    flex: 0 0 23.8%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    row-gap: var(--mb-1-5);
-    padding: var(--mb-1);
-    background-color: var(--white);
-    border-radius: 20px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    transition: all 0.3s ease;
-    cursor: pointer;
+@keyframes fade {
+  from {
+    opacity: 0.6;
   }
-
-  .qr-card:hover {
-    background-color: var(--soft-black);
-    scale: 1.02;
-  }
-
-  .qr-card:hover .qr {
-    background-color: rgba(191, 192, 194, 0.3);
-  }
-
-  .qr-card:hover .qr-content h3 {
-    color: var(--soothing-blue);
-  }
-
-  .qr-card:hover .qr-content p {
-    color: var(--shy-blue);
-  }
-
-  .qr-card img {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  .qr-content {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    row-gap: var(--mb-0-75);
-  }
-
-  .qr-content h3 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    text-align: center;
-  }
-
-  .qr-content p {
-    width: 85%;
-    font-weight: 400;
-    text-align: center;
+  to {
+    opacity: 1;
   }
 }
+
+/* @media only screen and (max-width: 1440px) { */
+/*==================== QR CARD SECTION ====================*/
+.qr {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-gray);
+}
+
+.qr-card {
+  flex: 0 0 23.8%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: var(--mb-1-5);
+  padding: var(--mb-1);
+  background-color: var(--white);
+  border-radius: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.qr-card:hover {
+  background-color: var(--soft-black);
+  scale: 1.02;
+}
+
+.qr-card:hover .qr-content h3 {
+  color: var(--soothing-blue);
+}
+
+.qr-card:hover .qr-content p {
+  color: var(--shy-blue);
+}
+
+.qr-card img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.qr-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: var(--mb-0-75);
+}
+
+.qr-content h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.qr-content p {
+  width: 85%;
+  font-weight: 400;
+  text-align: center;
+}
+
+.qr-dialog {
+  position: absolute;
+  width: 37%;
+  height: auto;
+  right: -150%;
+  top: 30%;
+  transition: all 1.5s ease-in;
+  /* display: none; */
+  /* border: 2px red solid; */
+}
+
+.qr-dialog__card {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* display: none; */
+}
+
+.qr-dialog__card i {
+  font-size: var(--fs-3);
+  color: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-dialog__card span {
+  position: relative;
+  width: fit-content;
+  height: auto;
+  padding: var(--mb-1) var(--mb-1-5);
+  background-color: var(--white);
+  border-radius: 8px;
+  font-family: var(--body-font);
+  font-size: 0.9375rem;
+  color: var(--dark-blue);
+  font-weight: 400;
+  line-height: 22px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.qr-dialog__card span i {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--soft-black);
+}
+
+.qr-dialog__card span i:hover {
+  color: var(--error);
+}
+
+.show-qr-dialog {
+  right: 0;
+}
+/* } */
 
 /* smartphones, iPhones */
 @media only screen and (max-width: 480px) {
