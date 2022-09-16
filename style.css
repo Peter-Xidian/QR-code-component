@@ -305,10 +305,16 @@ a {
   }
 
   .qr-content {
-    padding: 0 var(--mb-1);
+    padding: 0 var(--mb-0-5);
+  }
+
+  .qr-content h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
   }
 
   .qr-content p {
-    width: 90%;
+    width: 95%;
   }
 }
