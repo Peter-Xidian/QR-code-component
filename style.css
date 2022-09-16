@@ -96,6 +96,7 @@ body {
   font-size: 0.9375rem;
   color: var(--light-gray);
   background-color: var(--white);
+  overflow: hidden;
 }
 
 p {
@@ -291,10 +292,23 @@ a {
 /* smartphones, iPhones */
 @media only screen and (max-width: 480px) {
   .qr {
-    padding: var(--mb-2);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .qr-card {
-    flex: 0 0 100%;
+    flex: 0 0 80%;
+  }
+
+  .qr-content {
+    padding: 0 var(--mb-1);
+  }
+
+  .qr-content p {
+    width: 90%;
   }
 }

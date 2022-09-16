@@ -59,19 +59,13 @@
   </script>
 
   <script>
-    setTimeout(() => {
+if (window.screen.width >= 1024) {
+  setTimeout(() => {
       document.querySelector('.qr-dialog').classList.add("show-qr-dialog"); 
     }, 3000);
-
+}
     function closeDialog() {
       document.querySelector('.qr-dialog').classList.remove("show-qr-dialog");  
     }
   </script>
 </html>
-
-
-IF (WIDTH < NUMBER) {
-
-} ELSE {
-  
-}
