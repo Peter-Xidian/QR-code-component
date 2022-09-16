@@ -21,51 +21,51 @@
     />
   </head>
 
-  <!-- BODY -->
-  <body>
+    <!-- BODY -->
+    <body>
+      <!-- QR SECTION -->
+      <section class="qr">
+        <div class="qr-card">
+          <img src="images/image-qr-code.png" alt="" onclick="NewTab()" />
 
-    <!-- QR SECTION -->
-    <section class="qr">
-      <div class="qr-card">
-        <img src="images/image-qr-code.png" alt="" onclick="NewTab()" />
-<div class="qr-content">
-    <h3>Improve your front-end skills by building projects</h3>
-    <p>
-      Scan the QR code to visit Frontend Mentor and Take your coding skills
-      to the next level
-</div>
-
-        </p>
-      </div>
-
-      <!-- QR DIALOG MODAL -->
-      <div class="qr-dialog">
-        <div class="qr-dialog__card">
-          <i class='bx bx-chevron-left bx-tada' ></i>
-
-          <span>
-            Scan QR Code with your mobile camera or click on QR Code to be redirected to <strong style="color: hsl(218, 44%, 22%);">frontend mentor's</strong> page.
-            <i class='bx bx-x' onclick="closeDialog()"></i>
-          </span>
+        <div class="qr-content">
+            <h3>Improve your front-end skills by building projects</h3>
+            <p>
+              Scan the QR code to visit Frontend Mentor and Take your coding skills
+              to the next level
         </div>
-      </div>
-    </section>
-  </body>
+          </p>
+        </div>
 
-  <script>
-    function NewTab() {
-      window.open("https://www.frontendmentor.io/", "_blank");
-    }
-  </script>
+        <!-- QR DIALOG MODAL -->
+        <div class="qr-dialog">
+          <div class="qr-dialog__card">
+            <i class='bx bx-chevron-left bx-tada' ></i>
 
-  <script>
-if (window.screen.width >= 1024) {
-  setTimeout(() => {
-      document.querySelector('.qr-dialog').classList.add("show-qr-dialog"); 
-    }, 3000);
-}
-    function closeDialog() {
-      document.querySelector('.qr-dialog').classList.remove("show-qr-dialog");  
-    }
-  </script>
+            <span>
+              Scan QR Code with your mobile camera or click on QR Code to be redirected to <strong style="color: hsl(218, 44%, 22%);">frontend mentor's</strong> page.
+              <i class='bx bx-x' onclick="closeDialog()"></i>
+            </span>
+          </div>
+        </div>
+      </section>
+    </body>
+
+    <!-- QR SCRIPT -->
+    <script>
+      function NewTab() {
+        window.open("https://www.frontendmentor.io/", "_blank");
+      }
+    </script>
+
+    <script>
+  if (window.screen.width >= 1024) {
+    setTimeout(() => {
+        document.querySelector('.qr-dialog').classList.add("show-qr-dialog"); 
+      }, 3000);
+  }
+      function closeDialog() {
+        document.querySelector('.qr-dialog').classList.remove("show-qr-dialog");  
+      }
+    </script>
 </html>
